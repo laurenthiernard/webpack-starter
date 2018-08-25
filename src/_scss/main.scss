@@ -1,0 +1,12 @@
+$color-orange: #f98a0999;
+main {
+  background: $color-orange;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & article {
+    background-color: #43567366;
+  }
+}
