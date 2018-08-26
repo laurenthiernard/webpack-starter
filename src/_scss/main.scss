@@ -1,12 +1,74 @@
-$color-orange: #f98a0999;
+$light-orange: #34b46933;
+/* End of custom var */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+}
+/* End of reset */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 1.3rem;
+}
+/* End of typos */
+
+header {
+  background-image: url('../img/background.png');
+  background-size: cover;
+  height: 250px;
+  color: #FFF;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 main {
-  background: $color-orange;
+  background: $light-orange;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  & article {
-    background-color: #43567366;
+  & .page-content {
+    padding: 10px;
+    margin: 10px;
+    &__article {
+      background-color: #43567322;
+      padding: 10px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    @media all and (min-width:600px) {
+      display: grid;
+      grid-template-columns: 180px auto 150px;
+      grid-template-rows: 25% 300px auto;
+      &__article {
+        margin: 10px 10px;
+      }
+    }
   }
+}
+.hero {
+  width: 100%;
+  height: auto;
 }
